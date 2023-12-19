@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Data.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal col-6">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+    </dl>
+    <dl class="col-4">
+        <img src="/Uploads/@Html.DisplayFor(model => model.Image)" style="height: 300px; width:300px; margin-left:100px">
+    </dl>
+</div>
+<div>
+    <a asp-action="IndexUser">Back to List</a>
+</div>
